@@ -102,7 +102,7 @@ undefined4 main(void)
       pbVar6 = pbVar6 + (uint)bVar12 * -2 + 1;
     } while ((bool)uVar8);
     if ((!(bool)uVar11 && !(bool)uVar8) == (bool)uVar11) {
-      if (auth[8] == 0) {
+      if (auth[32] == 0) {
         fwrite("Password:\n",1,10,stdout);
       }
       else {
