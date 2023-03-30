@@ -17,7 +17,7 @@ SHELLCODE : \x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x89
 
 calcule de l’offset :
 le buffer fait 76 de taille
-A la fin du buffer on a le pointeur ebp (notre position actuelle) qui fait un taille de 4 ENSUITE, il y a notre return adresse. 76 + 4 = 80.
+avant ca la variable uint est initialisee sur la stack d'une taille de 4 ENSUITE, il y a notre return adresse. 76 + 4 = 80.
 grace a gets : on positionne notre SHELLCODE de taille 25 au début du buffer il nous reste donc 80-25 = 55 pour atteindre le début de l'adresse de retour de la fonction p. on complète donc avec A x 55, puis on y cale notre nouvelle adresse de retour qui est celle dans laquelle alloue strdup.
 pour trouver l’adrese on lance ltrace ./level2
 
